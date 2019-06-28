@@ -3,6 +3,9 @@ pipeline {
 
     stages {
         stage('Build') {
+            agent {
+                docker { image 'webapp:latest' }
+            }
             steps {
                 sh 'go version'
                 echo 'Building..'
@@ -10,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'docker ps'
+                sh 'http://localhost:8081'
                 echo 'Testing..'
             }
         }
