@@ -2,7 +2,7 @@ FROM golang:1.12
 
 LABEL maintainer="Luis Carvalho <luis.carvalho@talkdesk.com>"
 
-WORKDIR $GOPATH/src/testes/hello_world
+WORKDIR $GOPATH/src/testes/webapp
 
 COPY . .
 
@@ -11,4 +11,4 @@ RUN go install -v ./...
 
 EXPOSE 8081
 
-CMD ["hello_world"]
+CMD ["webapp"]
