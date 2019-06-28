@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'curl -L 127.0.0.1:8081'
                 echo 'Testing..'
             }
         }
