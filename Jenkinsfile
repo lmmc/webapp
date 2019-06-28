@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'curl -L http://localhost:8081'
+                sh 'docker ps'
                 echo 'Testing..'
             }
         }
